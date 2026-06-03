@@ -1,0 +1,150 @@
+:root {
+    --primary-color: #2e7d32; /* Verde Agronegócio */
+    --secondary-color: #388e3c;
+    --dark-color: #212121;
+    --light-bg: #f4f6f4;
+    --card-bg: #ffffff;
+    --accent-color: #e65100;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.main-header {
+    background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.main-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.main-header .subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Intro & Conclusion */
+.intro-section, .conclusion-section {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    margin: 40px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.intro-section h2, .conclusion-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.intro-section p, .conclusion-section p {
+    margin-bottom: 15px;
+}
+
+blockquote {
+    border-left: 5px solid var(--accent-color);
+    padding-left: 15px;
+    font-style: italic;
+    margin-top: 20px;
+    color: #555;
+}
+
+/* Campo de Busca */
+.search-section {
+    margin-bottom: 30px;
+}
+
+#odsSearch {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#odsSearch:focus {
+    border-color: var(--primary-color);
+}
+
+/* Grid de ODS */
+.ods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 15fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.ods-card {
+    background-color: var(--card-bg);
+    border-top: 5px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.ods-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.ods-number {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.ods-card h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.ods-card p {
+    font-size: 0.95rem;
+    color: #444;
+    text-align: justify;
+}
+
+/* Footer */
+.main-footer {
+    background-color: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 60px;
+    font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main-header h1 { font-size: 1.8rem; }
+    .ods-grid { grid-template-columns: 1fr; }
+}
